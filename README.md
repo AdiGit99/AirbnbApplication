@@ -1,4 +1,4 @@
-# Bamboos
+# Healthcare MERN web application
 
 This is a self-initiated project to build a web application that can facilitate scheduling, payment and other advanced features for the Hong Kong based company Bamboos
 Healthcare Holdings Limited (Bamboos). Briefly, Bamboos is a B2B service that connects registered healthcare personnel with clients such as hospitals, elderly homes etc. 
@@ -15,4 +15,3 @@ To be done:
 - Payment page
 - File upload page
 - Figuring out how to incorporate CRM
-- Scheduling feature
