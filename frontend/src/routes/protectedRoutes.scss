@@ -1,0 +1,24 @@
+.protected-general {
+  position: relative;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+
+  .protected-general-container {
+    display: flex;
+    width: 100%;
+    margin: 0;
+    padding: 0;
+  }
+}
+
+.protected-provider {
+  min-width: 1300px;
+  position: relative;
+  padding: 0;
+  margin: 0;
+
+  .protected-provider-content-container {
+    display: flex;
+  }
+}

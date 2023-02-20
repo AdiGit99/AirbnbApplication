@@ -1,0 +1,10 @@
+.payment-routes {
+  display: flex;
+  flex-direction: column;
+  width: 1060px;
+  padding: 15px 10px;
+
+  .payment-routes-container {
+    display: flex;
+  }
+}

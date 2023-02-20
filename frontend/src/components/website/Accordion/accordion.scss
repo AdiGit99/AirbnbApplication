@@ -1,0 +1,69 @@
+@import "../../../styles/globalStyles.scss";
+
+.accordion-item {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  border-top: 1px solid rgb(201, 197, 190);
+  border-bottom: 1px solid rgb(201, 197, 190);
+}
+
+.accordion-header {
+  display: flex;
+  justify-content: space-between;
+  position: relative;
+  align-items: center;
+  padding: 5px 20px;
+}
+
+.accordion-header:hover {
+  background-color: $secondary-color;
+  cursor: pointer;
+}
+
+.accordion-title {
+  font-family: $primary-font;
+  font-weight: 700;
+  color: #1f2430;
+  font-size: 20px;
+  display: flex;
+  height: 50px;
+  font-size: 20px;
+  align-items: center;
+}
+
+.accordion-button {
+  position: absolute;
+  right: 20px;
+  background-color: $secondary-color;
+  width: 25px;
+  height: 25px;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  .accordion-icon {
+    font-size: 16px;
+  }
+}
+
+.accordion-content {
+  font-family: $primary-font;
+  font-weight: 400;
+  color: #555555;
+  display: flex;
+  position: relative;
+  font-size: 18px;
+  padding: 10px 20px;
+}
+
+@media screen and (max-width: 700px) {
+  body {
+    font-size: 18px;
+  }
+
+  .accordion {
+    width: 90%;
+  }
+}

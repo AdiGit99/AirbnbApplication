@@ -1,0 +1,9 @@
+@import "../../../styles/globalStyles.scss";
+
+.register-container {
+  height: 100%;
+  width: 100%;
+  border: 2px solid blue;
+  position: fixed;
+  background-color: $secondary-color;
+}

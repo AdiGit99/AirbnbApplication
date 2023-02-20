@@ -1,0 +1,93 @@
+@import "../../../styles/globalStyles.scss";
+
+//footer
+.account-footer {
+  display: flex;
+  padding: 40px;
+  padding-bottom: 20px;
+  background-color: rgb(245, 245, 245);
+  width: 100%;
+
+  .account-footer-container {
+    display: block;
+    max-width: 2000px;
+    padding: 0 15px;
+    width: 100%;
+  }
+
+  .account-footer-grid {
+    display: grid;
+    grid-template-columns: repeat(4, auto);
+    padding-bottom: 30px;
+    border-bottom: 1px solid grey;
+
+    .account-footer-column {
+      padding-top: 10px;
+
+      .account-footer-header {
+        font-family: $primary-font;
+        font-weight: 600;
+        font-size: 16px;
+        display: flex;
+        margin-bottom: 20px;
+      }
+
+      .account-footer-column-link {
+        padding-bottom: 15px;
+        list-style-type: none;
+
+        a {
+          font-family: $primary-font;
+          font-weight: 300;
+          font-size: 15px;
+        }
+
+        a:hover {
+          text-decoration: underline;
+        }
+      }
+    }
+  }
+
+  .links-socials-container {
+    display: flex;
+    align-items: center;
+    position: relative;
+    margin-top: 10px;
+
+    a {
+      padding: 0 10px;
+      color: black;
+      text-decoration: none;
+    }
+
+    .links-footer-name {
+      padding: 10px;
+      padding-left: 0;
+      color: black;
+    }
+
+    .socials-icon-wrapper {
+      display: flex;
+      position: absolute;
+      right: 0;
+
+      .socials-icon-container {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 30px;
+        width: 30px;
+        margin: 0 10px;
+
+        .socials-icon {
+          font-size: 25px;
+        }
+      }
+    }
+  }
+
+  @include sm {
+    display: none;
+  }
+}

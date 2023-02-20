@@ -1,0 +1,136 @@
+@import "../../../styles/globalStyles.scss";
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  text-decoration: none;
+  font-size: 15px;
+  color: black;
+}
+
+.careers-wrapper {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  padding-bottom: 50px;
+
+  .careers-hero-container {
+    display: flex;
+    display: flex;
+    flex-direction: column;
+    padding: 80px 0;
+
+    .careers-color-block {
+      height: 650px;
+      width: 100%;
+      background-color: $secondary-color;
+      position: absolute;
+      left: 0;
+      top: 0;
+      z-index: -3;
+    }
+
+    .careers-subtitle {
+      font-family: $primary-font;
+      font-size: 16px;
+      font-weight: 700;
+      color: rgba(17, 17, 17, 0.57);
+      line-height: 20px;
+      letter-spacing: 1px;
+      margin-bottom: 25px;
+    }
+
+    .careers-title {
+      font-family: $title-font;
+      font-size: 56px;
+      letter-spacing: -2px;
+      font-weight: 600;
+      color: black;
+      line-height: 64px;
+      max-width: 800px;
+      margin-bottom: 60px;
+    }
+
+    .careers-banner-container {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      overflow: hidden;
+      max-height: 450px;
+
+      .careers-banner {
+        width: 1150px;
+        height: auto;
+      }
+    }
+  }
+
+  .careers-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 80px 0;
+
+    input {
+      margin-bottom: 30px;
+      font-family: $primary-font;
+      font-weight: 400;
+      color: grey;
+      font-size: 16px;
+      border-radius: 10px;
+      width: 450px;
+      height: 50px;
+      display: flex;
+      align-items: center;
+      border: none;
+      background-color: rgb(240, 240, 240);
+      padding: 0 20px;
+    }
+
+    .career-options-container {
+      display: grid;
+      grid-template-columns: repeat(4, auto);
+      justify-content: center;
+      align-items: center;
+      grid-gap: 20px;
+    }
+
+    .career-card {
+      display: flex;
+      flex-direction: column;
+      padding: 10px;
+      text-align: left;
+      border: 1px solid black;
+      border-radius: 10px;
+      margin: 3px;
+      width: 300px;
+      height: 250px;
+      padding-left: 10px;
+      background-color: $secondary-color;
+
+      h1 {
+        font-family: $primary-font;
+        font-weight: 700;
+        font-size: 18px;
+        margin-bottom: 5px;
+      }
+
+      h3 {
+        font-family: $primary-font;
+        font-weight: 500;
+        font-size: 16px;
+        margin-bottom: 5px;
+      }
+
+      p {
+        font-family: $primary-font;
+        font-weight: 500;
+        font-size: 16px;
+      }
+    }
+  }
+}

@@ -1,0 +1,46 @@
+@import "../../../styles/globalStyles.scss";
+
+.bottomNav {
+  display: none;
+}
+
+@include sm {
+  .bottomNav {
+    display: flex;
+    width: 100%;
+    justify-content: space-around;
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    background-color: white;
+    padding: 8px 0;
+    border-top: 1px solid grey;
+
+    .icon-container {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+
+      .icon {
+        fill: grey;
+        width: 30px;
+        height: 30px;
+      }
+
+      .nav-header {
+        font-size: 12px;
+        color: grey;
+      }
+    }
+
+    .icon-container-active {
+      .icon {
+        fill: $primary-color;
+      }
+      .nav-header {
+        color: $primary-color;
+      }
+    }
+  }
+}

@@ -1,0 +1,80 @@
+[
+  {
+    "id": 1,
+    "position": "Provider Network Growth",
+    "department": "Business Development",
+    "description": "We're looking to hire a mission-driven healthcare recruiter to join our provider network grwoth team. We are a highly collaborative department that leads the full recruitment process, from marketing and outreach to applicant evaluation and hiring."
+  },
+  {
+    "id": 2,
+    "position": "Quality Assurance Manager",
+    "department": "Business Development",
+    "description": "We're looking for a healthcare expert who is passionate and proficient about different forms of treatments to lead our provider netowrk development team in assessing and recruiter providers to fit in the network."
+  },
+  {
+    "id": 3,
+    "position": "Accounting Specialist",
+    "department": "General and Administrative team",
+    "description": "The ideal candidate is highly proactive, extremly organized, and thrives in a fast-paced and exciting environment. To be successful in this role, you must have flexibility to adapt to changing priorities, business drivers and organizational needs."
+  },
+  {
+    "id": 4,
+    "position": "Corporate Paralegal",
+    "department": "General and Administrative team",
+    "description": "You will be a critical team member in growing our legal team to support internal stakeholders in fulfilling our mission to help make healthcare more accessible to everyone."
+  },
+  {
+    "id": 5,
+    "position": "Business Operations Manager",
+    "department": "General and Administrative team",
+    "description": "The Business Operations team works cross-functionally to enable and support the growth of the company. This role is for someone who has a knack for seeing connections and teling stories with data, and is passionate abuot systems and scaling."
+  },
+  {
+    "id": 6,
+    "position": "Customer Success Manager",
+    "department": "Marketing",
+    "description": "We are looking for a Customer Success Manager who is energized by engaging with customers, building relationships and delivering results. You should be a highly organized, detail-oriented and resourceful."
+  },
+  {
+    "id": 7,
+    "position": "Technical Recruiter",
+    "department": "Human Resources",
+    "description": "We are looking for an experienced recruiter to grow and scale our technology teams. You can expect high impact and wide-raniging responsibilites, owning full-cycle recruiting, driving hiring strategy and delivering a stellar candidate experience."
+  },
+  {
+    "id": 8,
+    "position": "UX Writer",
+    "department": "Product Design",
+    "description": "We are looking for an experienced UX writer to join the Product Design team and lead UX writing across every step of the journey. As a UX writer, you'll shape the culture and process of content design from the ground up."
+  },
+  {
+    "id": 9,
+    "position": "Lead Product Manager",
+    "department": "Product Design",
+    "description": "We are loking for an experienced Lead Product Manager to help drive the vision, strategy and execution for our products and services. In this role, you will define and deliver to market both new offerings from our company, as well as improvements to our existing platform."
+  },
+  {
+    "id": 10,
+    "position": "Lead Product Designer",
+    "department": "Product Design",
+    "description": "We are looking for Lead Product Designers to help craft solutions across every step of the journey. As a Product Designer, you'll lead projects to successful outcomes for users and the business by approaching problems holistically and creawting elegantly simple solutions to complex problems."
+  },
+  {
+    "id": 11,
+    "position": "Lead UX Researcher",
+    "department": "Product Design",
+    "description": "We are looing for a Lead UX Researcher to help craft client solutions across every step of the joruney. As a Lead UX Researcher, you wil help shape the research culture and process from the ground up while owning both high-level strategy and tactical execution."
+  },
+  {
+    "id": 12,
+    "position": "Software Engineer",
+    "department": "Technology",
+    "description": "We are looking for exceptional engineers to join our team. We care deeply about making a difference in people's lives and hope you do too. This role can be full time in offices or remote. Create lasting impact by building and improve our Python or Java-based APIs."
+  },
+  {
+    "id": 3,
+    "position": "Frontend Engineer",
+    "department": "Technology",
+    "description": "We are looking for exceptional engineers to join our team. We care deeply about making a difference in people's lives and hope you do too. Create laasting impact by building and continuously improve our React-based products. Work within the engineering team on designing and developing our product functionality."
+  }
+]

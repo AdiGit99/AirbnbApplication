@@ -1,0 +1,210 @@
+@import "../../../styles/globalStyles.scss";
+
+.insights {
+  display: flex;
+  flex-direction: column;
+  padding: 0 5px;
+  border: 2px solid blue;
+  height: calc(100vh - 90px);
+  padding: 50px 100px;
+
+  .insight-navbar {
+    display: flex;
+    width: 100%;
+    margin-bottom: 20px;
+
+    .insight-tabs-container {
+      display: flex;
+      width: 100%;
+      border-bottom: 1px solid rgb(215, 215, 215);
+
+      .insight-tab {
+        padding: 10px;
+        margin-right: 20px;
+        font-family: $primary-font;
+        font-size: 15px;
+        font-weight: 500;
+        color: grey;
+      }
+
+      .insight-tab-active {
+        color: black;
+        border-bottom: 1px solid black;
+      }
+
+      .insight-tab:hover {
+        background: rgb(245, 245, 245);
+        cursor: pointer;
+        border-radius: 5px;
+      }
+    }
+  }
+
+  .insights-content-container {
+    display: flex;
+
+    .insights-content {
+      display: flex;
+      min-width: 590px;
+      margin-right: 100px;
+      flex-direction: column;
+
+      .insights-info-container {
+        display: flex;
+        flex-direction: column;
+        border-bottom: 1px solid rgb(231, 231, 231);
+        padding: 20px 0;
+
+        .insights-info-top {
+          display: flex;
+          margin-bottom: 5px;
+
+          h4 {
+            font-family: $primary-font;
+            font-size: 16px;
+            font-weight: 400;
+          }
+
+          span {
+            font-family: $primary-font;
+            font-size: 14px;
+            font-weight: 500;
+            margin-left: auto;
+          }
+          span:hover {
+            cursor: pointer;
+          }
+        }
+
+        .insights-info-top-disabled {
+          span {
+            color: rgb(218, 218, 218);
+          }
+          pointer-events: none;
+        }
+
+        .insights-info-bottom {
+          display: flex;
+
+          .insights-info-edit {
+            width: 100%;
+            display: flex;
+            flex-direction: column;
+
+            .name-detail {
+              font-family: $primary-font;
+              font-size: 14px;
+              font-weight: 400;
+              margin-bottom: 20px;
+            }
+
+            .name-inputs-wrapper {
+              display: flex;
+              justify-content: space-between;
+              margin-bottom: 20px;
+
+              .name-input-container {
+                display: flex;
+                padding: 10px;
+                flex-direction: column;
+                border: 1px solid grey;
+                border-radius: 10px;
+                width: 280px;
+
+                .name-input {
+                  border: none;
+                  font-size: 18px;
+                  color: black;
+                }
+
+                .name-input:focus {
+                  outline: none;
+                }
+
+                .name-input-label {
+                  color: grey;
+                  font-size: 13px;
+                }
+              }
+            }
+
+            .insights-info-save-button {
+              display: flex;
+              height: 50px;
+              width: 80px;
+              justify-content: center;
+              align-items: center;
+              font-family: $primary-font;
+              font-weight: 600;
+              font-size: 16px;
+              background-color: black;
+              color: white;
+              border-radius: 10px;
+            }
+          }
+
+          h3 {
+            font-family: $primary-font;
+            font-size: 15px;
+            font-weight: 400;
+            color: grey;
+          }
+        }
+      }
+
+      .insights-info-container-disabled {
+        cursor: not-allowed;
+
+        h4 {
+          color: rgb(218, 218, 218);
+        }
+
+        span {
+          color: rgb(218, 218, 218);
+        }
+
+        .insights-info-bottom {
+          h3 {
+            color: rgb(218, 218, 218);
+          }
+        }
+      }
+    }
+
+    .insights-detail-container {
+      display: flex;
+      height: 260px;
+      flex-direction: column;
+      border: 1px solid grey;
+      border-radius: 10px;
+      padding: 20px;
+
+      .insights-detail-icon-container {
+        display: flex;
+
+        .insights-detail-icon {
+          fill: rgb(38, 33, 87);
+          height: 40px;
+          width: 40px;
+        }
+      }
+
+      .insights-detail-title {
+        font-family: $primary-font;
+        font-weight: 600;
+        font-size: 22px;
+        letter-spacing: -0.5px;
+        padding: 10px 0 20px 0;
+      }
+
+      .insights-detail-description {
+        font-family: $primary-font;
+        font-weight: 300;
+        font-size: 15px;
+        line-height: 20px;
+        color: grey;
+        margin-bottom: 10px;
+      }
+    }
+  }
+}

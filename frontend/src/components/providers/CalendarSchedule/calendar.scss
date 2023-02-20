@@ -1,0 +1,121 @@
+@import "../../../styles/globalStyles.scss";
+
+.calendar-root-schedule {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  height: 100%;
+  max-height: 750px;
+  padding: 0 10px;
+
+  /* | Sun | Mon | Tue | Wed | Thu | Fri | Sat  */
+  .day-of-week-header-cell {
+    display: flex;
+    justify-content: center;
+    color: black;
+    background-color: white;
+    padding: 8px 0;
+    min-width: 0;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+  }
+
+  .calendar-wrapper {
+    display: flex;
+    flex-grow: 0.4;
+    flex-direction: column;
+  }
+
+  // .calendar-wrapper:first-child {
+  //   border-bottom: 1px solid grey;
+  // }
+
+  .days-of-week,
+  .days-grid {
+    box-sizing: border-box;
+    display: grid;
+    grid-template-columns: repeat(7, 1fr);
+    // grid-auto-rows: 20px;
+  }
+
+  .days-of-week {
+    border-bottom: 1px solid grey;
+    margin-bottom: 5px;
+  }
+  .days-grid {
+    position: relative;
+  }
+
+  .day-grid-item-container {
+    position: relative;
+    background-color: white;
+    display: flex;
+    padding: 5px 0;
+    height: 40px;
+  }
+
+  .day-grid-item-container:not(.current-month) {
+    cursor: not-allowed;
+  }
+
+  .day-grid-item-container:not(.current-month) .day-content-wrapper {
+    color: rgba(0, 0, 0, 0.4);
+    pointer-events: none;
+  }
+
+  .day-grid-item-container:not(.current-month) .day-grid-item-header {
+    color: rgba(0, 0, 0, 0.4);
+  }
+
+  .day-content-wrapper:hover {
+    cursor: pointer;
+  }
+
+  .day-grid-item-header-active {
+    background-color: rgb(157, 173, 255);
+    color: white;
+  }
+
+  /* Position the day label within the day cell */
+  .day-grid-item-header {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: black;
+    border-radius: 50%;
+    height: 30px;
+    width: 30px;
+    font-weight: 500;
+  }
+
+  .day-content-wrapper {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 100%;
+    min-height: 0;
+    position: relative;
+    border-radius: 50%;
+  }
+  .calendar-date-time-container {
+    display: flex;
+    align-items: center;
+    position: relative;
+    padding: 5px 0;
+
+    .calendar-date-time {
+      font-family: $primary-font;
+      font-size: 18px;
+      font-weight: 600;
+    }
+
+    .numberAppointments {
+      margin-left: auto;
+      font-size: 16px;
+      font-weight: 400;
+      color: grey;
+    }
+  }
+}

@@ -1,0 +1,175 @@
+@import "../../../styles/globalStyles.scss";
+
+.payouts {
+  display: flex;
+  flex-direction: column;
+  padding: 0 5px;
+
+  .payouts-content-container {
+    display: flex;
+
+    .payouts-content {
+      display: flex;
+      min-width: 590px;
+      margin-right: 100px;
+      flex-direction: column;
+
+      .payouts-info-container {
+        display: flex;
+        flex-direction: column;
+        border-bottom: 1px solid rgb(231, 231, 231);
+        padding: 20px 0;
+
+        .payouts-info-top {
+          display: flex;
+          margin-bottom: 5px;
+
+          h4 {
+            font-family: $primary-font;
+            font-size: 16px;
+            font-weight: 400;
+          }
+
+          span {
+            font-family: $primary-font;
+            font-size: 14px;
+            font-weight: 500;
+            margin-left: auto;
+          }
+          span:hover {
+            cursor: pointer;
+          }
+        }
+
+        .payouts-info-top-disabled {
+          span {
+            color: rgb(218, 218, 218);
+          }
+          pointer-events: none;
+        }
+
+        .payouts-info-bottom {
+          display: flex;
+
+          .payouts-info-edit {
+            width: 100%;
+            display: flex;
+            flex-direction: column;
+
+            .name-detail {
+              font-family: $primary-font;
+              font-size: 14px;
+              font-weight: 400;
+              margin-bottom: 20px;
+            }
+
+            .name-inputs-wrapper {
+              display: flex;
+              justify-content: space-between;
+              margin-bottom: 20px;
+
+              .name-input-container {
+                display: flex;
+                padding: 10px;
+                flex-direction: column;
+                border: 1px solid grey;
+                border-radius: 10px;
+                width: 280px;
+
+                .name-input {
+                  border: none;
+                  font-size: 18px;
+                  color: black;
+                }
+
+                .name-input:focus {
+                  outline: none;
+                }
+
+                .name-input-label {
+                  color: grey;
+                  font-size: 13px;
+                }
+              }
+            }
+
+            .payouts-info-save-button {
+              display: flex;
+              height: 50px;
+              width: 80px;
+              justify-content: center;
+              align-items: center;
+              font-family: $primary-font;
+              font-weight: 600;
+              font-size: 16px;
+              background-color: black;
+              color: white;
+              border-radius: 10px;
+            }
+          }
+
+          h3 {
+            font-family: $primary-font;
+            font-size: 15px;
+            font-weight: 400;
+            color: grey;
+          }
+        }
+      }
+
+      .payouts-info-container-disabled {
+        cursor: not-allowed;
+
+        h4 {
+          color: rgb(218, 218, 218);
+        }
+
+        span {
+          color: rgb(218, 218, 218);
+        }
+
+        .payouts-info-bottom {
+          h3 {
+            color: rgb(218, 218, 218);
+          }
+        }
+      }
+    }
+
+    .payouts-detail-container {
+      display: flex;
+      height: 260px;
+      flex-direction: column;
+      border: 1px solid grey;
+      border-radius: 10px;
+      padding: 20px;
+
+      .payouts-detail-icon-container {
+        display: flex;
+
+        .payouts-detail-icon {
+          fill: rgb(38, 33, 87);
+          height: 40px;
+          width: 40px;
+        }
+      }
+
+      .payouts-detail-title {
+        font-family: $primary-font;
+        font-weight: 600;
+        font-size: 22px;
+        letter-spacing: -0.5px;
+        padding: 10px 0 20px 0;
+      }
+
+      .payouts-detail-description {
+        font-family: $primary-font;
+        font-weight: 300;
+        font-size: 15px;
+        line-height: 20px;
+        color: grey;
+        margin-bottom: 10px;
+      }
+    }
+  }
+}

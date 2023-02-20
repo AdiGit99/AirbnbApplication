@@ -1,0 +1,108 @@
+.nav-spacer-temp-sticky {
+  height: 91px;
+  width: 100%;
+}
+
+.rates-container {
+  display: flex;
+}
+
+.rates {
+  display: block;
+  margin: 0 auto;
+  margin-bottom: 60px;
+  width: 93%;
+}
+
+.rates-title-container {
+  display: flex;
+  padding: 60px 0;
+  padding-bottom: 0;
+}
+
+.rates-title-container h1 {
+  font-size: 40px;
+  font-weight: bold;
+}
+
+.plans-container {
+  display: flex;
+  flex: 1;
+}
+
+.plans-matrix {
+  width: 100%;
+  border-collapse: collapse;
+  border: 1px solid grey;
+  position: relative;
+}
+
+/* Sticky container */
+.plans-container-sticky {
+  position: fixed;
+  top: 90px;
+  margin: 0 auto;
+  z-index: 10;
+}
+
+.plans-matrix-sticky {
+  border-collapse: collapse;
+  border: 1px solid grey;
+}
+
+.plans-matrix-sticky .plans-matrix-header {
+  background-color: white;
+}
+
+.plans-matrix-sticky .plans-matrix-row-hours {
+  background-color: white;
+}
+
+.plans-matrix-sticky .plans-matrix-title {
+  background-color: white;
+}
+
+.plans-matrix-sticky .plans-matrix-title-two {
+  background-color: white;
+}
+
+.plans-matrix-row-grid-cell-sticky {
+  background-color: white;
+}
+
+.plans-matrix tr,
+th,
+td {
+  border: 0.5px solid grey;
+}
+
+.plans-matrix-header {
+  height: 70px;
+}
+
+.plans-matrix-row-hours {
+  height: 70px;
+}
+
+.plans-matrix-row {
+  height: 70px;
+}
+
+.plans-matrix-row-header {
+  height: 70px;
+}
+
+.plans-matrix-row-header-cell {
+  padding: 20px 0 20px 20px;
+  font-size: 30px;
+  border-right: none;
+}
+
+.plans-matrix-row-grid-item {
+  padding-left: 20px;
+  width: 300px;
+}
+
+.plans-matrix-row-grid-cell {
+  text-align: center;
+}

@@ -1,0 +1,60 @@
+@import "../../../styles/globalStyles.scss";
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  text-decoration: none;
+  font-size: 15px;
+  color: black;
+  font-family: $primary-font;
+}
+
+.authDetails-container {
+  margin-top: 80px;
+  display: flex;
+  width: 570px;
+  height: 630px;
+  flex-direction: column;
+
+  .authDetails-content {
+    display: flex;
+    flex-direction: column;
+    padding: 0 20px;
+
+    h2 {
+      display: flex;
+      font-family: $primary-font;
+      font-size: 20px;
+      font-weight: 500;
+      line-height: 1.3;
+      margin-bottom: 20px;
+    }
+
+    .form {
+      display: flex;
+      flex-direction: column;
+      margin-bottom: 20px;
+
+      h4 {
+        margin-bottom: 15px;
+      }
+
+      .authDetails-button {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 50px;
+        border-radius: 10px;
+        border: none;
+        cursor: pointer;
+        font-family: $primary-font;
+        font-size: 16px;
+        font-weight: 600;
+        line-height: 1.3;
+        background-color: $primary-color;
+        color: white;
+      }
+    }
+  }
+}

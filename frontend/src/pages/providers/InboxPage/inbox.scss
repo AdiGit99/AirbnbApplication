@@ -1,0 +1,253 @@
+@import "../../../styles/globalStyles.scss";
+
+.inbox {
+  display: flex;
+  height: calc(100vh - 90px);
+  max-width: 2000px;
+  position: relative;
+
+  .inbox-side-menu-container {
+    display: flex;
+    flex-direction: column;
+    width: 250px;
+    height: 100%;
+    z-index: -2;
+    position: relative;
+    background-color: rgb(245, 245, 245);
+    padding: 20px 10px 40px;
+
+    .inbox-side-menu-header {
+      font-family: $primary-font;
+      font-size: 24px;
+      font-weight: 500;
+      padding: 0 15px;
+      margin-bottom: 20px;
+    }
+
+    .inbox-side-menu-option {
+      display: flex;
+      border-radius: 20px;
+      padding: 10px 15px;
+      align-items: center;
+
+      .inbox-side-menu-icon {
+        height: 18px;
+        width: 18px;
+        fill: grey;
+        margin-right: 8px;
+      }
+      .inbox-side-menu-option-name {
+        font-family: $primary-font;
+        font-size: 15px;
+        font-weight: 400;
+        color: grey;
+      }
+    }
+
+    .inbox-side-menu-option-active {
+      background-color: black;
+
+      .inbox-side-menu-icon {
+        fill: white;
+      }
+      .inbox-side-menu-option-name {
+        color: white;
+      }
+    }
+
+    .inbox-side-menu-subheader {
+      margin: 40px 0 10px 15px;
+      font-family: $primary-font;
+      font-size: 14px;
+      font-weight: 500;
+      color: grey;
+    }
+
+    .inbox-side-menu-feedback-button {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      border-radius: 5px;
+      margin-top: auto;
+      border: 1px solid rgb(154, 154, 154);
+      padding: 8px;
+
+      .inbox-side-menu-feedback-icon {
+        height: 18px;
+        width: 18px;
+        transform: rotate(-45deg);
+        margin-bottom: 4px;
+        margin-right: 8px;
+      }
+
+      .inbox-side-menu-feedback-name {
+        font-family: $primary-font;
+        font-size: 15px;
+        font-weight: 500;
+      }
+    }
+
+    .inbox-side-menu-feedback-button:hover {
+      border: 1px solid black;
+      background-color: rgb(231, 231, 231);
+    }
+  }
+
+  .inbox-content-container {
+    height: 100%;
+    width: 100%;
+    position: absolute;
+    right: 0;
+    background-color: white;
+    display: flex;
+    flex-direction: column;
+    padding: 20px 25px;
+    transition: all 0.6s ease;
+    border-left: 1px solid rgb(154, 154, 154);
+
+    .inbox-top-container {
+      display: flex;
+      flex-direction: column;
+      width: 100%;
+
+      .inbox-header-container {
+        display: flex;
+        margin-bottom: 10px;
+
+        .inbox-tab-icon-container {
+          display: flex;
+          margin-right: 5px;
+          padding: 8px;
+          border-radius: 50%;
+
+          .inbox-tab-icon {
+            height: 18px;
+            width: 18px;
+          }
+        }
+
+        .inbox-tab-icon-container:hover {
+          background-color: rgb(245, 245, 245);
+          cursor: pointer;
+        }
+
+        .inbox-header {
+          font-family: $primary-font;
+          font-size: 24px;
+          font-weight: 500;
+        }
+      }
+    }
+
+    .inbox-search-wrapper {
+      display: flex;
+      align-items: center;
+      margin-bottom: 20px;
+
+      .inbox-search-container {
+        display: flex;
+        align-items: center;
+        border: 1px solid grey;
+        border-radius: 15px;
+        width: 100%;
+        padding: 10px;
+        margin-right: 10px;
+        background-color: rgb(245, 245, 245);
+
+        .inbox-search-icon-container {
+          height: 18px;
+          width: 18px;
+          margin-right: 10px;
+        }
+        .inbox-search {
+          border: none;
+          outline: none;
+          background: transparent;
+        }
+
+        .inbox-search:focus,
+        .inbox-serach:active {
+          background: transparent;
+        }
+      }
+
+      .inbox-search-container:focus {
+        border: 1px solid black;
+
+        .inbox-search-icon-container {
+          fill: black;
+        }
+      }
+
+      .inbox-filter-icon-container {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin-left: auto;
+        border-radius: 50%;
+        padding: 10px;
+
+        .inbox-filter-icon {
+          height: 18px;
+          width: 18px;
+        }
+      }
+      .inbox-filter-icon-container:hover {
+        cursor: pointer;
+        background-color: rgb(245, 245, 245);
+      }
+    }
+
+    .inbox-content {
+      display: flex;
+      justify-content: center;
+      padding: 10px 0;
+      min-height: 250px;
+
+      .inbox-no-messages-container {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+
+        .inbox-messages-icon-container {
+          height: 35px;
+          width: 35px;
+        }
+
+        .inbox-header {
+          margin: 15px 0;
+          font-family: $primary-font;
+          font-size: 18px;
+          font-weight: 500;
+        }
+
+        .inbox-detail {
+          font-family: $primary-font;
+          font-size: 14px;
+          font-weight: 400;
+          color: grey;
+          margin-bottom: 20px;
+        }
+
+        .inbox-archive-button {
+          padding: 20px 25px;
+          background-color: black;
+          border-radius: 10px;
+          font-family: $primary-font;
+          font-size: 18px;
+          font-weight: 500;
+          color: white;
+        }
+
+        .inbox-archive-button:hover {
+          cursor: pointer;
+        }
+      }
+    }
+  }
+
+  .inbox-content-container-active {
+    width: calc(100% - 250px);
+  }
+}

@@ -1,0 +1,54 @@
+@import "../styles/globalStyles.scss";
+
+* {
+  font-family: $primary-font;
+  font-size: 18px;
+  font-weight: 500;
+  color: black;
+}
+
+.overlay {
+  background-color: rgba(0, 0, 0, 0.4);
+  height: 200%;
+  width: 100%;
+  position: absolute;
+  top: 0;
+  overflow: hidden;
+}
+
+.auth-wrapper {
+  width: 100%;
+  position: absolute;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 23;
+  top: 0px;
+}
+
+.container {
+  margin: 0 auto;
+  max-width: 2000px;
+  padding: 0;
+  position: relative;
+  border: 1px solid black;
+  overflow: hidden;
+}
+
+.overflow {
+  overflow: hidden;
+}
+
+.overflow-temp {
+  margin: 0 auto;
+  // min-width: 1300px;
+  max-width: 2000px;
+  padding: 0;
+  position: relative;
+  border: 1px solid black;
+
+  @include md {
+    margin-bottom: 60px;
+  }
+}

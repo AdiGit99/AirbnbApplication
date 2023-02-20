@@ -1,0 +1,201 @@
+@import "../../../styles/globalStyles.scss";
+
+.security {
+  display: flex;
+  justify-content: center;
+  width: 100%;
+
+  .security-wrapper {
+    display: flex;
+    flex-direction: column;
+    width: 1060px;
+    padding: 15px;
+
+    .account-directory {
+      display: flex;
+      margin-bottom: 15px;
+
+      .account-header {
+        font-family: $primary-font;
+        font-size: 15px;
+        font-weight: 400;
+        margin-right: 10px;
+      }
+
+      .account-from-to:hover {
+        cursor: pointer;
+        text-decoration: underline;
+      }
+    }
+
+    .profile-header {
+      font-family: $primary-font;
+      letter-spacing: -1px;
+      font-size: 30px;
+      font-weight: 600;
+    }
+
+    .security-content-container {
+      margin-top: 40px;
+      display: flex;
+
+      .security-content {
+        display: flex;
+        min-width: 590px;
+        margin-right: 100px;
+        flex-direction: column;
+
+        .section-header {
+          font-family: $primary-font;
+          font-weight: 500;
+          font-size: 22px;
+          margin-top: 15px;
+        }
+        .security-info-container {
+          display: flex;
+          flex-direction: column;
+          border-bottom: 1px solid rgb(231, 231, 231);
+          padding: 20px 0;
+
+          .security-info-top {
+            display: flex;
+            margin-bottom: 5px;
+
+            h4 {
+              font-family: $primary-font;
+              font-size: 16px;
+              font-weight: 400;
+            }
+
+            span {
+              font-family: $primary-font;
+              font-size: 14px;
+              font-weight: 500;
+              text-decoration: underline;
+              margin-left: auto;
+            }
+            span:hover {
+              cursor: pointer;
+            }
+          }
+
+          .security-info-top-disabled {
+            pointer-events: none;
+          }
+
+          .security-info-bottom {
+            display: flex;
+
+            .security-info-edit {
+              width: 100%;
+              display: flex;
+              flex-direction: column;
+
+              .password-input-title {
+                font-family: $primary-font;
+                font-size: 15px;
+                font-weight: 300;
+                padding: 10px 0;
+              }
+
+              .password-input-container {
+                display: flex;
+                padding: 10px;
+                flex-direction: column;
+                border: 1px solid grey;
+                border-radius: 10px;
+                width: 100%;
+
+                .password-input {
+                  border: none;
+                  font-size: 18px;
+                  color: black;
+                }
+
+                .password-input:focus {
+                  outline: none;
+                }
+              }
+
+              .security-info-save-button {
+                display: flex;
+                height: 50px;
+                width: 160px;
+                margin-top: 15px;
+                justify-content: center;
+                align-items: center;
+                font-family: $primary-font;
+                font-weight: 600;
+                font-size: 16px;
+                background-color: black;
+                color: white;
+                border-radius: 10px;
+              }
+            }
+
+            h3 {
+              font-family: $primary-font;
+              font-size: 15px;
+              font-weight: 400;
+              color: grey;
+            }
+          }
+        }
+
+        .security-info-container-disabled {
+          cursor: not-allowed;
+
+          h4 {
+            color: rgb(218, 218, 218);
+          }
+
+          span {
+            color: rgb(218, 218, 218);
+          }
+
+          .security-info-bottom {
+            h3 {
+              color: rgb(218, 218, 218);
+            }
+          }
+        }
+      }
+
+      .security-detail-container {
+        display: flex;
+        height: 320px;
+        flex-direction: column;
+        border: 1px solid grey;
+        border-radius: 10px;
+        padding: 20px;
+
+        .security-detail-icon-container {
+          display: flex;
+
+          .security-detail-icon {
+            fill: rgb(38, 33, 87);
+            height: 40px;
+            width: 40px;
+          }
+        }
+
+        .security-detail-title {
+          font-family: $primary-font;
+          font-weight: 600;
+          font-size: 22px;
+          letter-spacing: -0.5px;
+          padding: 10px 0 20px 0;
+        }
+
+        .security-detail-description {
+          font-family: $primary-font;
+          font-weight: 300;
+          font-size: 15px;
+          line-height: 20px;
+          color: grey;
+          margin-bottom: 10px;
+        }
+      }
+    }
+  }
+}

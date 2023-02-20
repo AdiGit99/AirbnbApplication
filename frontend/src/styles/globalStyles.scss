@@ -1,0 +1,155 @@
+// Google Fonts
+@import url("https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;500;600;700;800&family=Source+Sans+3:ital,wght@0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,900&display=swap");
+
+// Font Variables
+$primary-font: "Source Sans 3", sans-serif;
+$title-font: "Open Sans", sans-serif;
+
+//new
+// $primary-color: rgb(30, 25, 80);
+// $secondary-color: rgb(253, 251, 248);
+// $accent-color: rgb(170, 80, 66);
+$black: rgb(31, 31, 31);
+
+$primary-color: rgba(2, 58, 21, 255);
+$secondary-color: rgba(222, 233, 227, 255);
+$accent-color: rgba(239, 156, 150, 255);
+$background-color: rgba(250, 247, 244, 255);
+
+// Typography Palette
+$dark: #111;
+$grey: #555;
+
+// Breakpoints (Bootstrap)
+// Extra small devices (portrait phones, less than 576px)
+$screen-xs: 575.98px;
+
+// Small devices (landscape phones, less than 768px)
+$screen-sm: 767.98px;
+
+// Medium devices (tablets, less than 992px)
+$screen-md: 991.98px;
+
+// Large devices (desktops, less than 1200px)
+$screen-lg: 1199.98px;
+
+@mixin H1 {
+  font-family: $title-font;
+  font-weight: 500;
+  font-size: 95px;
+  letter-spacing: -2px;
+}
+
+@mixin H2 {
+  font-family: $title-font;
+  font-weight: 500;
+  font-size: 59px;
+  letter-spacing: -0.5px;
+}
+
+@mixin H3 {
+  font-family: $title-font;
+  font-weight: 600;
+  font-size: 48px;
+  letter-spacing: 0px;
+}
+
+@mixin H4 {
+  font-family: $title-font;
+  font-weight: 600;
+  font-size: 34px;
+  letter-spacing: 0.25px;
+}
+
+@mixin H5 {
+  font-family: $title-font;
+  font-weight: 600;
+  font-size: 24px;
+  letter-spacing: 0px;
+}
+
+@mixin H6 {
+  font-family: $title-font;
+  font-weight: 700;
+  font-size: 20px;
+  letter-spacing: 0.15px;
+}
+
+@mixin subtitle1 {
+  font-family: $primary-font;
+  font-weight: 500;
+  font-size: 16px;
+  letter-spacing: 0.15px;
+}
+
+@mixin subtitle2 {
+  font-family: $primary-font;
+  font-weight: 600;
+  font-size: 14px;
+  letter-spacing: 0.1px;
+}
+
+@mixin body1 {
+  font-family: $primary-font;
+  font-weight: 500;
+  font-size: 17px;
+  letter-spacing: 0.5px;
+}
+
+@mixin body2 {
+  font-family: $primary-font;
+  font-weight: 500;
+  font-size: 15px;
+  letter-spacing: 0.25px;
+}
+
+@mixin button {
+  font-family: $primary-font;
+  font-weight: 500;
+  font-size: 15px;
+  letter-spacing: 1.25px;
+}
+
+@mixin caption {
+  font-family: $primary-font;
+  font-weight: 500;
+  font-size: 13px;
+  letter-spacing: 0.4px;
+}
+
+@mixin overline {
+  font-family: $primary-font;
+  font-weight: 500;
+  font-size: 11px;
+  letter-spacing: 1.5px;
+}
+
+@mixin xs {
+  @media (max-width: #{$screen-xs}) {
+    @content;
+  }
+}
+
+@mixin sm {
+  @media (max-width: #{$screen-sm}) {
+    @content;
+  }
+}
+
+@mixin md {
+  @media (max-width: #{$screen-md}) {
+    @content;
+  }
+}
+
+@mixin lg {
+  @media (max-width: #{$screen-lg}) {
+    @content;
+  }
+}
+
+@mixin rwd($screen) {
+  @media (max-width: #{$screen + "px"}) {
+    @content;
+  }
+}

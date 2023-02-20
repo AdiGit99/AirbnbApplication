@@ -1,0 +1,301 @@
+@import "../../../styles/globalStyles.scss";
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  text-decoration: none;
+  font-size: 15px;
+  color: black;
+}
+
+.hero-info-nurse {
+  display: flex;
+  justify-content: center;
+  height: 680px;
+  padding: 50px;
+  position: relative;
+
+  .color-block-nurse {
+    z-index: -3;
+    background-color: $secondary-color;
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    height: 550px;
+    width: 35%;
+  }
+
+  .hero-container-info-nurse {
+    display: grid;
+    grid-template-columns: repeat(2, auto);
+    column-gap: 100px;
+    max-width: 1250px;
+  }
+
+  .info-container-nurse {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    max-width: 550px;
+
+    .small-headline-nurse {
+      @include H6;
+      display: flex;
+      margin-bottom: 10px;
+    }
+
+    .big-headline-nurse {
+      @include H2;
+      margin-bottom: 20px;
+    }
+
+    .subheadline-nurse {
+      @include body1;
+      color: $grey;
+      margin-bottom: 30px;
+    }
+  }
+
+  .img-container-info-nurse {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+    z-index: -3;
+    margin-right: 100px;
+    min-height: 320px;
+    min-width: 380px;
+    height: 520px;
+    width: 520px;
+    border-radius: 10px;
+    object-fit: fill;
+
+    .nurseBanner {
+      height: 100%;
+      width: auto;
+    }
+  }
+
+  .signup-button-nurse-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 60px;
+    width: 140px;
+    border-radius: 15px;
+    background-color: $primary-color;
+    box-shadow: rgba(0, 0, 0, 0.1) 0px 4px 12px;
+
+    .signup-button-nurse {
+      @include button;
+      color: white;
+      width: 100%;
+      height: 100%;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+  }
+}
+
+/* Section 2 */
+.section-two-nurse-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 70px 0;
+
+  .section-two-headers-nurse {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 90px;
+    align-items: center;
+
+    h1 {
+      @include H3;
+      margin-bottom: 10px;
+    }
+
+    p {
+      @include body1;
+      color: $grey;
+      max-width: 750px;
+      text-align: center;
+    }
+  }
+
+  .info-blocks-nurse {
+    min-width: 1300px;
+    justify-content: center;
+    display: grid;
+    grid-template-columns: repeat(3, 360px);
+    column-gap: 50px;
+
+    .block-info-container-nurse {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+
+      .nurse-icon-container {
+        width: 90px;
+        height: 90px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        border-radius: 50%;
+        background-color: $secondary-color;
+        margin-bottom: 15px;
+
+        .nurse-icon {
+          font-size: 50px;
+        }
+      }
+
+      .block-info-header-nurse {
+        @include H6;
+        margin-bottom: 10px;
+      }
+
+      .block-info-nurse {
+        @include body1;
+        text-align: center;
+        color: $grey;
+      }
+    }
+  }
+}
+
+/* Section 3 */
+.section-three-nurse {
+  display: flex;
+  flex-direction: column;
+  padding: 80px 0 120px;
+  justify-content: center;
+  align-items: center;
+  background-color: $secondary-color;
+}
+.banner-msg-container-nurse {
+  margin-bottom: 50px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.banner-header-nurse {
+  font-size: 44px;
+  font-family: $title-font;
+  font-weight: 600;
+  color: black;
+  letter-spacing: -2px;
+  margin-bottom: 10px;
+}
+
+.banner-message-nurse {
+  font-size: 18px;
+  font-family: $primary-font;
+  font-weight: 400;
+  color: #555555;
+  line-height: 29px;
+  max-width: 750px;
+  text-align: center;
+}
+.section-three-nurse-container {
+  display: grid;
+  grid-template-columns: repeat(2, auto);
+  column-gap: 50px;
+  justify-content: center;
+  height: 500px;
+
+  .accordion-container {
+    display: flex;
+    align-items: center;
+
+    .accordion {
+      display: flex;
+      flex-direction: column;
+      width: 500px;
+      margin: 20px auto;
+      transition: all 2s ease-in-out;
+    }
+  }
+
+  .section-three-banner-container {
+    display: flex;
+    width: 500px;
+    position: relative;
+    overflow: hidden;
+    border-radius: 35px;
+  }
+
+  .section-three-banner {
+    display: flex;
+    height: 100%;
+    width: 100%;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    padding: 0 50px;
+  }
+
+  .section-three-banner.active {
+    right: 0;
+    transition: 0.3s ease-out;
+    z-index: 10;
+  }
+
+  .section-three-banner.inactive {
+    transition-delay: 0.35s;
+    right: -100%;
+  }
+
+  .section-three-img-container {
+    display: flex;
+    margin: 0 auto;
+  }
+
+  .section-three-banner img {
+    margin: 0 auto;
+    height: 100%;
+    width: 100%;
+  }
+}
+
+/* Last section */
+.last-section-nurse {
+  height: 300px;
+  background-color: rgb(32, 28, 28);
+  padding: 80px 120px;
+}
+
+.last-section-banner-nurse {
+  display: flex;
+  justify-content: space-between;
+}
+
+.last-section-banner-nurse h1 {
+  color: white;
+  font-family: $title-font;
+  font-weight: 700;
+  line-height: 55px;
+  letter-spacing: -2px;
+  width: 700px;
+  font-size: 48px;
+}
+
+.contact-button-nurse {
+  background-color: white;
+  display: flex;
+  width: 170px;
+  height: 50px;
+  justify-content: center;
+  align-items: center;
+  margin-top: 20px;
+  border-radius: 10px;
+  font-family: $primary-font;
+  font-size: 14px;
+  font-weight: 700;
+  color: black;
+}
