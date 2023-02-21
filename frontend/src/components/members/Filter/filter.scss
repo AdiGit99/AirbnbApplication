@@ -1,0 +1,90 @@
+@import "../../../styles/globalStyles.scss";
+
+.filter-container {
+  display: flex;
+  position: relative;
+  align-items: center;
+  border: 1px solid grey;
+  background-color: white;
+  border-radius: 10px;
+  margin-right: 10px;
+  box-shadow: rgba(0, 0, 0, 0.1) 0px 4px 12px;
+
+  .filter-default-container {
+    display: flex;
+    width: 100%;
+    padding: 5px;
+    padding-left: 10px;
+
+    .filter-down-icon {
+      margin-left: 5px;
+      height: 25px;
+      width: 25px;
+    }
+  }
+
+  .filter-menu {
+    display: none;
+    flex-direction: column;
+    background-color: white;
+    z-index: 3;
+    padding-top: 10px;
+    width: 101%;
+    border: 1px solid grey;
+    border-top: none;
+    padding: 5px;
+    position: absolute;
+    top: 28px;
+    left: -0.5px;
+    margin-right: 10px;
+    border-bottom-left-radius: 10px;
+    border-bottom-right-radius: 10px;
+
+    .filter {
+      display: flex;
+      align-items: center;
+      margin-right: 10px;
+
+      span {
+        color: grey;
+        font-size: 15px;
+      }
+
+      .filter-tick-container {
+        border: 1px solid grey;
+        display: flex;
+        height: 20px;
+        width: 20px;
+        justify-content: center;
+        align-items: center;
+        margin-right: 10px;
+
+        .filter-tick {
+          height: 20px;
+          width: 20px;
+          fill: $primary-color;
+        }
+      }
+    }
+    .filter-active {
+      span {
+        color: $primary-color;
+      }
+
+      .filter-tick-container {
+        border-color: $primary-color;
+      }
+    }
+    .filter:hover {
+      cursor: pointer;
+    }
+  }
+
+  .filter-menu-active {
+    display: flex;
+  }
+}
+
+.filter-container:hover {
+  cursor: pointer;
+}

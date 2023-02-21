@@ -1,27 +1,56 @@
-import { useEffect, useState } from "react"
+import { useEffect, useState, useRef } from "react"
 import dayjs from "dayjs"
 import customParseFormat from "dayjs/plugin/customParseFormat"
 import { AuthContext } from "../../../context/AuthContext"
 import axios from "axios"
 
 import OrderModal from "../../../components/members/OrderModal/orderModal"
+import Filter from "../../../components/members/Filter/Filter"
 import Calendar from "../../../components/members/CalendarAppointments/Calendar"
 import {
   FormatListBulleted,
   AddOutlined,
   CloseOutlined,
+  Done,
+  ArrowDropDown,
 } from "@mui/icons-material"
 
 import "./appointments.scss"
 dayjs.extend(customParseFormat)
 
 export default function Appointments() {
-  const [filterMenu, setFilterMenu] = useState(false)
+  const [timeFilterMenu, setTimeFilterMenu] = useState(false)
+  const [statusFilterMenu, setStatusFilterMenu] = useState(false)
+
   //Filter options,
   //For weekFilter, if true, return all appointments during same week of selected day
   //For statusFilter, if true, return all appointments that are approved
   const [weekFilter, setWeekFilter] = useState(false)
-  const [statusFilter, setStatusFilter] = useState(false)
+  const [approvedFilter, setApprovedFilter] = useState(false)
+  const [processingFilter, setProcessingFilter] = useState(false)
+
+  //filter menu options
+
+  const timeFilters = [
+    {
+      filterTitle: "By Week",
+      filter: weekFilter,
+      setFilter: setWeekFilter,
+    },
+  ]
+
+  const statusFilters = [
+    {
+      filterTitle: "By Approved",
+      filter: approvedFilter,
+      setFilter: setApprovedFilter,
+    },
+    {
+      filterTitle: "By Processing",
+      filter: processingFilter,
+      setFilter: setProcessingFilter,
+    },
+  ]
 
   //Function to convert date object to array of [day,month,year]
   const toNums = (data) => {
@@ -72,7 +101,8 @@ export default function Appointments() {
       ? [dayjs().month() - 7, dayjs().year() + 1]
       : [dayjs().month() + 5, dayjs().year()]
 
-  const minMonthAndYear = [dayjs().month() + 1, dayjs().year()]
+  // const minMonthAndYear = [dayjs().month() + 1, dayjs().year()]
+  const minMonthAndYear = [dayjs().month(), dayjs().year()]
 
   //Manually set data for demo purposes
   useEffect(() => {
@@ -192,7 +222,6 @@ export default function Appointments() {
       } else {
         week = getWeek(date)
       }
-      console.log(week)
       //in production, we can do the following to get a date range to filter appointments in database
       //Get appointments with dates greater than week[0] (start of week) and less than week[1] (end of week)
       // const body = { userId, week[0], week[1]}
@@ -215,13 +244,33 @@ export default function Appointments() {
           item.year === week[0][2]
         )
       })
-    } else if (statusFilter) {
-      temp = temp.filter((item) => {
-        return item.status === "Approved"
-      })
+    }
+    if (!(approvedFilter && processingFilter)) {
+      if (approvedFilter) {
+        temp = temp.filter((item) => {
+          return item.status === "Approved"
+        })
+      }
+      if (processingFilter) {
+        temp = temp.filter((item) => {
+          return item.status === "Processing"
+        })
+      }
     }
     setList(temp)
-  }, [data, selectedDayMonthYear, weekFilter, statusFilter])
+  }, [data, selectedDayMonthYear, weekFilter, approvedFilter, processingFilter])
+
+  useEffect(() => {
+    if (eventSelection !== null) {
+      const temp = data.find((element) => {
+        return element.id === eventSelection
+      })
+
+      if (temp.month !== monthYearView[0] || temp.year !== monthYearView[1]) {
+        setMonthYearView([temp.month, temp.year])
+      }
+    }
+  }, [data, eventSelection])
 
   return (
     <div className="appointment">
@@ -249,63 +298,51 @@ export default function Appointments() {
       <div className="appointment-content-container">
         <div className="appointmentMenu">
           <div className="appointment-menu-topbar">
-            <div className="appointment-date">
-              Upcoming appointments{" "}
-              {selectedDayMonthYear.length ? (
-                <>
-                  on{" "}
-                  {dayjs()
-                    .month(selectedDayMonthYear[1] - 1)
-                    .format("MMMM")}{" "}
-                  {selectedDayMonthYear[0]}{" "}
-                </>
-              ) : (
-                <></>
-              )}
-            </div>
-            <div className="filter-container">
+            <div className="appointment-menu-top">
+              <div className="appointment-date">
+                Upcoming appointments{" "}
+                {selectedDayMonthYear.length ? (
+                  <>
+                    on{" "}
+                    {dayjs()
+                      .month(selectedDayMonthYear[1] - 1)
+                      .format("MMMM")}{" "}
+                    {selectedDayMonthYear[0]}{" "}
+                  </>
+                ) : (
+                  <></>
+                )}
+              </div>
               <div
-                className="filter-icon-container"
-                onClick={() => setFilterMenu(!filterMenu)}
+                className="appointment-icon-container"
+                onClick={() => {
+                  setSelectedDayMonthYear([])
+                  setWeekFilter(false)
+                  setApprovedFilter(false)
+                  setProcessingFilter(false)
+                }}
               >
+                Show All
+              </div>
+            </div>
+            <div className="appointment-menu-bottom">
+              {/* <div className="filter-icon-container">
                 <FormatListBulleted className="appointment-icon" />
-              </div>
-              <div
-                className={`filter-menu-container ${
-                  filterMenu && "filter-menu-container-active"
-                }`}
-              >
-                <div
-                  className={`filter ${weekFilter && "filter-active"}`}
-                  onClick={() => {
-                    setWeekFilter(true)
-                    setStatusFilter(false)
-                    setFilterMenu(false)
-                  }}
-                >
-                  By Week
-                </div>
-                <div
-                  className={`filter ${statusFilter && "filter-active"}`}
-                  onClick={() => {
-                    setWeekFilter(false)
-                    setStatusFilter(true)
-                    setFilterMenu(false)
-                  }}
-                >
-                  By Status
-                </div>
-              </div>
-            </div>
-            <div
-              className="appointment-icon-container"
-              onClick={() => {
-                setSelectedDayMonthYear([])
-                setWeekFilter(false)
-                setStatusFilter(false)
-              }}
-            >
-              Show All
+              </div> */}
+              <span className="filter-title">Filter by: </span>
+
+              <Filter
+                filterMenu={timeFilterMenu}
+                setFilterMenu={setTimeFilterMenu}
+                filterMenuTitle={"By Time"}
+                filters={timeFilters}
+              />
+              <Filter
+                filterMenu={statusFilterMenu}
+                setFilterMenu={setStatusFilterMenu}
+                filterMenuTitle={"By Status"}
+                filters={statusFilters}
+              />
             </div>
           </div>
           <div className="appointmentMenuWrapper">

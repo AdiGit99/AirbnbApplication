@@ -98,76 +98,50 @@
 
       .appointment-menu-topbar {
         display: flex;
-        align-items: center;
+        flex-direction: column;
         width: 100%;
         margin-bottom: 20px;
         padding: 0 5px;
 
-        .appointment-date {
-          font-family: $primary-font;
-          font-size: 20px;
-          font-weight: 500;
+        .appointment-menu-top {
+          display: flex;
+          margin-bottom: 10px;
+
+          .appointment-date {
+            font-family: $primary-font;
+            font-size: 20px;
+            font-weight: 500;
+          }
+
+          .appointment-icon-container {
+            padding: 5px;
+            border-radius: 5px;
+            border: 1px solid black;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            margin-left: auto;
+          }
+
+          .appointment-icon-container:hover {
+            cursor: pointer;
+          }
         }
 
-        .appointment-icon-container {
-          padding: 5px;
-          border-radius: 5px;
-          border: 1px solid black;
+        .appointment-menu-bottom {
           display: flex;
-          justify-content: center;
           align-items: center;
-        }
-
-        .appointment-icon-container:hover {
-          cursor: pointer;
-        }
-
-        .filter-container {
-          display: flex;
-          flex-direction: column;
-          border: 1px solid red;
-          margin-right: 10px;
-          margin-left: auto;
-          position: relative;
 
           .filter-icon-container {
             height: 25px;
             width: 25px;
           }
 
-          .filter-icon-container:hover {
-            cursor: pointer;
-          }
-
-          .filter-menu-container {
-            display: none;
-          }
-          .filter-menu-container-active {
-            display: flex;
-            flex-direction: column;
-            position: absolute;
-            top: 30px;
-            left: 0;
-            width: 200px;
-            background-color: white;
-            z-index: 3;
-            border-radius: 10px;
-            box-shadow: rgba(0, 0, 0, 0.1) 0px 4px 12px;
-
-            .filter {
-              @include H6;
-              padding: 10px;
-              margin-bottom: 10px;
-              z-index: 4;
-            }
-
-            .filter:hover {
-              cursor: pointer;
-            }
-
-            .filter-active {
-              background-color: $accent-color;
-            }
+          .filter-title {
+            font-family: $primary-font;
+            font-size: 20px;
+            font-weight: 500;
+            margin-right: 10px;
           }
         }
       }
@@ -234,12 +208,12 @@
         }
 
         .event-detail-container-active {
-          border: 2px solid rgb(157, 173, 255);
-          box-shadow: 0 0 0 1px rgb(157, 173, 255);
+          border: 2px solid $primary-color;
+          box-shadow: 0 0 0 1px $primary-color;
         }
 
         .event-detail-container-processing {
-          border: 3px solid red !important;
+          // border: 3px solid red !important;
           .event-time-block {
             background-color: red !important;
           }
@@ -265,6 +239,9 @@
       flex-direction: column-reverse;
 
       .appointmentMenu {
+        width: 100%;
+        min-width: unset;
+        flex-grow: 1;
       }
     }
   }
